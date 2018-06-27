@@ -19,7 +19,7 @@ Or you can download it [here](http://www.tcpdump.org/release/libpcap-1.7.4.tar.g
 
 ## Install
 Install **Libpcapy** with pip:
->pip3 install libpcap
+>pip3 install libpcapy
 
 
 ## Example
@@ -50,7 +50,7 @@ if handle:
     bpf = capture.bpf_program()  
     # Setting a filter  
   result = capture.pcap_setfilter(handle, bpf)  
-    capture.pcap_loop(handle, -1, my_callback, None)  
+    capture.call_loop(handle, -1, my_callback, None)  
   
 print("Closing live capture")  
 capture.pcap_close(handle)
