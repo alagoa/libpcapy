@@ -55,3 +55,5 @@ if handle:
 print("Closing live capture")  
 capture.pcap_close(handle)
 ```
+
+**Note**: You need to execute this script with a user that has capture priviledges, such as _root_.
