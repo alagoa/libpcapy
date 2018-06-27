@@ -49,7 +49,7 @@ handle = capture.pcap_open_live(device, snaplen, promisc, to_ms)
 if handle:  
     bpf = capture.bpf_program()  
     # Setting a filter  
-  result = capture.pcap_setfilter(handle, bpf)  
+    result = capture.pcap_setfilter(handle, bpf)  
     capture.call_loop(handle, -1, my_callback, None)  
   
 print("Closing live capture")  
