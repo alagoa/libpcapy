@@ -40,7 +40,7 @@ class CustomInstall(install):
 '''
 setup(name='libpcapy',
     description='Python library to use libpcap using ctypes',
-    version='0.1.10',
+    version='0.2.0',
     url='https://github.com/alagoa/libpcapy',
     author='Pedro Alagoa',
     author_email='alagoa.pedro@ua.pt',

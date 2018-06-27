@@ -6,14 +6,15 @@
 import ctypes
 
 PCAP_NETMASK_UNKNOWN = 0xffffffff
-
+PCAP_ERRBUF_SIZE = 256
 ETHERNET_HDR_SIZE = 14
 IP_HDR_binary_string_format = '!BBHHHBBH4s4s'
-ERR_BUFF_SIZE = 256
+
 
 class sockaddr(ctypes.Structure):
     _fields_ = [("sa_family", ctypes.c_ushort),
                 ("sa_data", ctypes.c_char * 14)]
+
 
 # We need to declare the structure before the fields because of the 'next' field
 class pcap_addr(ctypes.Structure):
@@ -27,6 +28,7 @@ pcap_addr._fields_ = [('next', ctypes.POINTER(pcap_addr)),
                       ('dstaddr', ctypes.POINTER(sockaddr))]
 
 
+# We need to declare the structure before the fields because of the 'next' field
 class pcap_if(ctypes.Structure):
     pass
 
@@ -72,5 +74,3 @@ class ipv4_header(ctypes.Structure):
                 ('ip_sum', ctypes.c_uint16),
                 ('ip_src', ctypes.c_uint32),
                 ('ip_dst', ctypes.c_uint32)]
-
-
