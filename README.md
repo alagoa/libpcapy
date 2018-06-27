@@ -31,7 +31,7 @@ from libpcapy import capture
 def my_callback(pkthdr, data, user_data):  
     print("Packet arrived!")  
     print("\tTimestamp: ", pkthdr.ts.tv_sec)  
-    print("\tLenght: ", pkthdr.caplen)  
+    print("\tLength: ", pkthdr.caplen)  
   
   
 # Find all capture devices  
